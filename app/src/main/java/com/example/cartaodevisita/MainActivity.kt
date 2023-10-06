@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-@Preview(showSystemUi = true, showBackground = true, backgroundColor = 567)
+@Preview(showSystemUi = true, backgroundColor = 0XFF800080, showBackground = true)
 @Composable
 fun CartaoVisita() {
     Box {
