@@ -37,22 +37,31 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-@Preview(showSystemUi = true, backgroundColor = 0XFF800080, showBackground = true)
+@Preview(showSystemUi = true)
 @Composable
 fun CartaoVisita() {
     Box {
 
         Image(
-            painter = painterResource(id = R.drawable.android_logo),
+            painter = painterResource(id = R.drawable.roxoo),
             contentDescription = null,
-            contentScale = ContentScale.Fit,
+            contentScale = ContentScale.FillBounds,
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 190.dp)
-                .size(150.dp)
-                .clip(RoundedCornerShape(16.dp)),
+                .fillMaxSize()
         )
-                Box {
+        Box {
+
+            Image(
+                painter = painterResource(id = R.drawable.android_logo),
+                contentDescription = null,
+                contentScale = ContentScale.Fit,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 190.dp)
+                    .size(150.dp)
+                    .clip(RoundedCornerShape(16.dp)),
+            )
+            Box {
                 Image(
                     painter = painterResource(id = R.drawable.insta),
                     contentDescription = null,
@@ -65,80 +74,106 @@ fun CartaoVisita() {
                         .clip(RoundedCornerShape(16.dp))
                 )
             }
-        Box {
-            Image(
-                painter = painterResource(id = R.drawable.zap),
-                contentDescription = null,
-                contentScale = ContentScale.Fit,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 652.dp)
-                    .padding(end = 185.dp)
-                    .size(18.dp)
-                    .clip(RoundedCornerShape(16.dp))
-            )
-        }
-        Box {
-            Image(
-                painter = painterResource(id = R.drawable.gmail),
-                contentDescription = null,
-                contentScale = ContentScale.Fit,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 715.dp)
-                    .padding(end = 185.dp)
-                    .size(18.dp)
-                    .clip(RoundedCornerShape(16.dp))
-            )
-        }
-
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
-
-
-        ) {
-
-            Text(
-                text = "Raphael Rodrigues",
-                fontSize = 45.sp,
-                fontWeight = FontWeight.Light,
-                color = Color.Black,
-                textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 330.dp)
-            )
-
-            Text(
-                text = "Android Developer Extraordinaire",
-                fontSize = 15.sp,
-                fontWeight = FontWeight.Black,
-                color = Color.Black,
-                textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 0.dp)
-            )
+            Box {
+                Image(
+                    painter = painterResource(id = R.drawable.zap),
+                    contentDescription = null,
+                    contentScale = ContentScale.Fit,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 652.dp)
+                        .padding(end = 185.dp)
+                        .size(18.dp)
+                        .clip(RoundedCornerShape(16.dp))
+                )
+            }
+            Box {
+                Image(
+                    painter = painterResource(id = R.drawable.gmail),
+                    contentDescription = null,
+                    contentScale = ContentScale.Fit,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 715.dp)
+                        .padding(end = 185.dp)
+                        .size(18.dp)
+                        .clip(RoundedCornerShape(16.dp))
+                )
+            }
+            Box {
+                Image(
+                    painter = painterResource(id = R.drawable.eva),
+                    contentDescription = null,
+                    contentScale = ContentScale.Fit,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 50.dp)
+                        .padding(start = 270.dp)
+                        .size(190.dp)
+                        .align(Alignment.TopEnd)
+                )
+            }
+            Box {
+                Image(
+                    painter = painterResource(id = R.drawable.evaa),
+                    contentDescription = null,
+                    contentScale = ContentScale.Fit,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 450.dp)
+                        .padding(end = 270.dp)
+                        .size(190.dp)
+                        .align(Alignment.TopEnd)
+                )
+            }
             Column(
                 modifier = Modifier.fillMaxSize(),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
 
+
             ) {
+
                 Text(
-                    text = "   +55 (11)95206-2629 ",
-                    fontSize = 17.sp,
-                    fontWeight = FontWeight.Black,
-                    color = Color.Black,
+                    text = "Raphael Rodrigues",
+                    fontSize = 45.sp,
+                    fontWeight = FontWeight.Light,
+                    color = Color.White,
                     textAlign = TextAlign.Center,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(top = 150.dp)
+                        .padding(top = 322.dp)
                 )
-                Contatos(text = "@Rapha0riginal", Color.Black)
-                Contatos(text = "                    raphael.rb172@gmail.com", Color.Black)
+
+                Text(
+                    text = "Android Developer Extraordinaire",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Black,
+                    color = Color.White,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 0.dp)
+                )
+                Column(
+                    modifier = Modifier.fillMaxSize(),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally
+
+                ) {
+                    Text(
+                        text = "   +55 (11)95206-2629 ",
+                        fontSize = 17.sp,
+                        fontWeight = FontWeight.Black,
+                        color = Color.White,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 150.dp)
+                    )
+                    Contatos(text = "@Rapha0riginal", Color.White)
+                    Contatos(text = "                    raphael.rb172@gmail.com", Color.White)
+                }
             }
         }
     }
