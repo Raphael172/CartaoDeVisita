@@ -133,7 +133,8 @@ fun Contatos(text:String, id:Int) {
             contentDescription = null,
             modifier = Modifier
                 .size(25.dp)
-                .clip(RoundedCornerShape(16.dp))
+                .clip(CircleShape)
+                .border(2.5.dp, Color(113,31,140), CircleShape)
         )
         Text(
             text = text,
