@@ -43,7 +43,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun CartaoVisita() {
     Box {
-
         Image(
             painter = painterResource(id = R.drawable.roxoo),
             contentDescription = null,
@@ -51,75 +50,57 @@ fun CartaoVisita() {
             modifier = Modifier
                 .fillMaxSize()
         )
-
-            Box {
-                Image(
-                    painter = painterResource(id = R.drawable.shinjii),
-                    contentDescription = null,
-                    contentScale = ContentScale.Fit,
-                    modifier = Modifier
-                        .padding(start = 115.dp)
-                        .padding(top = 200.dp).padding()
-                        .size(150.dp)
-                        .clip(RoundedCornerShape(80.dp))
-                        .border(3.dp, Color(113,31,140), CircleShape)
-                )
-                Image(
-                    painter = painterResource(id = R.drawable.eva),
-                    contentDescription = null,
-                    contentScale = ContentScale.Fit,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(top = 50.dp)
-                        .padding(start = 270.dp)
-                        .size(190.dp)
-                )
-            }
-                Image(
-                    painter = painterResource(id = R.drawable.evaa),
-                    contentDescription = null,
-                    contentScale = ContentScale.Fit,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(top = 450.dp)
-                        .padding(end = 270.dp)
-                        .size(190.dp)
-                )
-            Column(
-                modifier = Modifier
-                    .padding(top = 350.dp)
-                    .fillMaxSize(),
-                horizontalAlignment = Alignment.CenterHorizontally,
-            ) {
-
-                Text(
-                    text = "Raphael Rodrigues",
-                    fontSize = 45.sp,
-                    fontWeight = FontWeight.Medium,
-                    color = Color(44,140,31),
-                )
-                Text(
-                    text = "Android Developer Depressive",
-                    fontSize = 15.sp,
-                    fontWeight = FontWeight.Black,
-                    color = Color(44, 140,31),
-                )
-            }
-                Column(
-                    verticalArrangement = Arrangement.spacedBy(10.dp),
-                    modifier = Modifier
-                        .padding(start = 115.dp)
-                        .padding(top = 660.dp)
-                ) {
-                    Contatos(text = "+55 (11)95206-2629",
-                        id = R.drawable.zap)
-                    Contatos(text = "@Rapha0riginal",
-                        id = R.drawable.insta)
-                    Contatos(text = "raphael.rb172@gmail.com",
-                        id = R.drawable.gmail)
-                }
-
-
+        Image(
+            painter = painterResource(id = R.drawable.evaa),
+            contentDescription = null,
+            contentScale = ContentScale.Fit,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 640.dp)
+                .padding(end = 250.dp)
+                .size(125.dp)
+    )
+}
+    Column(
+        modifier = Modifier
+            .padding(top = 220.dp)
+            .fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.shinjii),
+            contentDescription = null,
+            contentScale = ContentScale.Fit,
+            modifier = Modifier
+                .size(150.dp)
+                .clip(RoundedCornerShape(80.dp))
+                .border(3.dp, Color(113,31,140), CircleShape)
+        )
+        Text(
+            text = "Raphael Rodrigues",
+            fontSize = 45.sp,
+            fontWeight = FontWeight.Medium,
+            color = Color(44,140,31),
+        )
+        Text(
+            text = "Android Developer Depressive",
+            fontSize = 15.sp,
+            fontWeight = FontWeight.Black,
+            color = Color(44, 140,31),
+        )
+    }
+    Column(
+        verticalArrangement = Arrangement.spacedBy(10.dp),
+        modifier = Modifier
+            .padding(start = 115.dp)
+            .padding(top = 660.dp)
+    ) {
+        Contatos(text = "+55 (11)95206-2629",
+            id = R.drawable.zap)
+        Contatos(text = "@Rapha0riginal",
+            id = R.drawable.insta)
+        Contatos(text = "raphael.rb172@gmail.com",
+            id = R.drawable.gmail)
     }
 }
 @Composable
