@@ -105,21 +105,21 @@ fun CartaoVisita() {
 }
 @Composable
 fun Contatos(text:String, id:Int) {
-    Row (
+    Row(
         horizontalArrangement = Arrangement.spacedBy(10.dp),
         verticalAlignment = Alignment.CenterVertically
-    ){
+    ) {
         Image(
             painter = painterResource(id = id),
             contentDescription = null,
             modifier = Modifier
                 .size(25.dp)
                 .clip(CircleShape)
-                .border(2.5.dp, Color(113,31,140), CircleShape)
+                .border(2.5.dp, Color(113, 31, 140), CircleShape)
         )
         Text(
             text = text,
-            color = Color(44,140,31),
+            color = Color(44, 140, 31),
             fontSize = 15.sp,
             fontWeight = FontWeight.Black
         )
